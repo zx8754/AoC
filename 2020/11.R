@@ -3,13 +3,12 @@ m <- as.matrix(read.fwf("11_data.txt", widths = rep(1, 90)))
 
 # part 1 ------------------------------------------------------------------
 cntHash1 <- function(mm, rr, cc){
-  if(mm[ rr, cc ] == "."){ -1 } else {
-    mB <- rbind(NA, cbind(NA, mm, NA), NA)
-    cc = cc + 1
-    rr = rr + 1
-    m1 <- mB[ (rr - 1):(rr + 1), (cc - 1):(cc + 1)]
-    m1[2, 2] <- "C" # Centre
-    sum(m1 == "#", na.rm = TRUE)}
+  mB <- rbind(NA, cbind(NA, mm, NA), NA)
+  cc = cc + 1
+  rr = rr + 1
+  m1 <- mB[ (rr - 1):(rr + 1), (cc - 1):(cc + 1)]
+  m1[2, 2] <- "C" # Centre
+  sum(m1 == "#", na.rm = TRUE)
 }
 
 res1 <- res2 <- m
