@@ -63,3 +63,4 @@ while(test){
   res1[ res2 == "#" & ix >= 5 ] <- "L"
   if(identical(res1, res2)){ test = FALSE } else {res2 <- res1}
 }
+# [1] "82 1862"
