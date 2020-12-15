@@ -31,8 +31,6 @@ for(i in seq.int(x)){
   H[[ paste0("n", x[ i ]) ]] <- c(i, i)
 }
 
-t1 <- Sys.time()
-names(H)
 lastSpoken <- paste0("n", tail(x, 1))
 #n = 2020
 n = 30000000
