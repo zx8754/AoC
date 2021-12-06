@@ -3,14 +3,13 @@ d <- as.integer(strsplit(readLines("06_data.txt"), ",")[[1]])
 #part 1 -----------------------------------------------------------------------
 res <- d
 for(i in 1:80){
-  #i=2
   newFish = vector("integer")
   if(any(res == 0)) newFish <- rep(8, sum(res == 0))
   res <- res - 1
   res[ res < 0 ] <- 6
   res <- c(res, newFish)
-  
-}
+  }
+
 length(res)
 # [1] 343441
 
